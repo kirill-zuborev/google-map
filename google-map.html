@@ -78,6 +78,30 @@ If you're seeing the message "You have included the Google Maps API multiple tim
           
         @apply --google-map-container;
       }
+
+      #map .gm-control-active > img {
+        box-sizing: content-box;
+        display: none;
+        left: 50%;
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%,-50%);
+      }
+
+      #map .gm-control-active > img:nth-child(1) {
+        display:block;
+      }
+
+      #map .gm-control-active:hover > img:nth-child(1),
+      #map .gm-control-active:active > img:nth-child(1) {
+        display:none;
+      }
+
+      #map .gm-control-active:hover > img:nth-child(2),
+      #map .gm-control-active:active > img:nth-child(3) {
+        display:block;
+      }
     </style>
 
     <google-maps-api
